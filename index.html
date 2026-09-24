@@ -357,7 +357,7 @@ function storePicker(cur){
   return `<fieldset class="storepick"><legend>Магазин</legend><div class="opts compact">
     ${STORES.map(x=>`<label class="opt"><input type="radio" name="store" value="${esc(x)}" ${cur===x?"checked":""}><span>${esc(x)}</span></label>`).join("")}
     <label class="opt"><input type="radio" name="store" value="__other" ${other?"checked":""}><span>Другой</span></label></div>
-    <input id="f-store" class="other-store" placeholder="Например, 112 Новосибирск 3" autocomplete="off" value="${other?esc(cur):""}" ${other?"":"hidden"}></fieldset>`;
+    <input id="f-store" class="other-store" placeholder="Например, 012 Новосибирск 1" autocomplete="off" value="${other?esc(cur):""}" ${other?"":"hidden"}></fieldset>`;
 }
 function readStore(){const r=document.querySelector('input[name="store"]:checked');if(!r)return null;return r.value==="__other"?$("#f-store").value.trim():r.value}
 function storeError(v){return v===null?"Выберите магазин.":v===""?"Впишите номер и название магазина.":""}
