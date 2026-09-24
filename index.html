@@ -341,8 +341,8 @@ function vHome(){
     ${API_ON?"":`<div class="banner warn" style="margin-top:14px">Демо-режим: таблица не подключена, доступно несколько товаров для проверки.</div>`}
     ${S.hintHidden?"":`<div class="hint"><div style="flex:1"><b>Добавьте приложение на экран «Домой»</b>Так черновики точно не потеряются. В Safari: «Поделиться», затем «На экран Домой». В Chrome: меню, затем «Добавить на главный экран».</div><button class="icon-btn" data-act="hideHint" aria-label="Скрыть подсказку">${I.close}</button></div>`}
     <div class="actions">
-      <button class="tile main" data-act="newCard"><span class="ic">${I.scan}</span><span><b>Карточка списания</b><span>С1 и другие коды, с суммой ЗЦ</span></span></button>
-      <button class="tile" data-act="newAct"><span class="ic">${I.card}</span><span><b>Акт об утилизации</b><span>Причина по умолчанию С1</span></span></button>
+      <button class="tile main" data-act="newCard"><span class="ic">${I.scan}</span><span><b>Карточка списания</b><span>С1 и другие коды</span></span></button>
+      <button class="tile" data-act="newAct"><span class="ic">${I.card}</span><span><b>Акт об утилизации</b><span>Списание образцов и ранее изъятого</span></span></button>
     </div>
     <h2>Мои документы</h2>
     ${docs.length?`<div class="list">${docs.map(d=>{const n=d.items.length;
